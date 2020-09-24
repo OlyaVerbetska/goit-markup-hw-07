@@ -1,53 +1,58 @@
 .contacts {
-    margin-left: auto;
-    align-items: center;
-  }
-  .contacts__item:not(:last-child) {
-    margin-right: 50px;
-  }
-  
-  .contacts__link {
-    color: $text-color;
-    align-items: center;
-    transition: color $tdur $ttf;
-  }
-  .contacts__icon {
-    fill: $text-color;
-  
-    display: inline-block;
-    margin-right: 10px;
-    transition: fill $tdur $ttf;
-  }
+  margin-left: auto;
+  align-items: center;
+}
+.contacts__item:not(:last-child) {
+  margin-right: 50px;
+}
 
+.contacts__link {
+  color: $text-color;
+  align-items: center;
+  transition: color $tdur $ttf;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+.contacts__icon {
+  fill: $text-color;
 
+  display: inline-block;
+  margin-right: 10px;
+  transition: fill $tdur $ttf;
+
+  .contacts__link:hover & {
+    fill: $accent-color;
+  }
+}
 
 // Футер
 
-  .post {
-    display: inline-block;
-    margin-bottom: 9px;
-  
-    font-style: normal;
-    @include font(400, 14px, 0.03em, 1.71);
-      
-    color: $contrast-white-color;
-  }
+.post {
+  display: inline-block;
+  margin-bottom: 9px;
 
-  .link.mail {
-    display: inline-block;
-    margin-bottom: 9px;
-  }
-  
-  .footer .link {
-    font-style: normal;
-    @include font(400, 14px, 0.03em, 1.71);
-   
-  
-    color: $contrast-text-color;
-  
-    transition: color $tdur $ttf;
-  }
-  
-  .footer .link:not(:last-child) {
-    margin-bottom: 9px;
-  }
+  font-style: normal;
+  @include font(400, 14px, 0.03em, 1.71);
+
+  color: $contrast-white-color;
+}
+
+.link.mail {
+  display: inline-block;
+  margin-bottom: 9px;
+}
+
+.footer .link {
+  font-style: normal;
+  @include font(400, 14px, 0.03em, 1.71);
+
+  color: $contrast-text-color;
+
+  transition: color $tdur $ttf;
+}
+
+.footer .link:not(:last-child) {
+  margin-bottom: 9px;
+}

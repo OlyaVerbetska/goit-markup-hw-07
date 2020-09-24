@@ -18,6 +18,7 @@
 
 .current {
   position: relative;
+  color: $accent-color;
 }
 
 .current::after {

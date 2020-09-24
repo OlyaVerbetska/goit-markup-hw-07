@@ -32,25 +32,15 @@
 
 
 
-.site-nav .link:hover,
-.site-nav .link:focus,
-.link.current,
-.contacts .link:hover,
-.contacts .link:focus,
+
+
+
 .footer .link:hover,
 .footer .link:focus {
   color: $accent-color;
 }
 
-.contacts .link:hover .post-icon,
-.contacts .link:focus .post-icon {
-  fill: $accent-color;
-}
 
-.contacts .link:hover .tel-icon,
-.contacts .link:focus .tel-icon {
-  fill: $accent-color;
-}
 .features,
 .clients {
   padding: 94px 0;

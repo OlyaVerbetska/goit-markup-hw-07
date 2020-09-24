@@ -1,6 +1,8 @@
 @import './utils/variables';
-@import './base/common';
 @import './utils/hidden';
+@import './utils/mixins';
+
+@import './base/common';
 
 @import './components/logo';
 @import './components/navigation';
@@ -27,10 +29,8 @@
 
 
 
-.site-nav .item:not(:last-child),
-.contacts .item:not(:last-child) {
-  margin-right: 50px;
-}
+
+
 
 .site-nav .link:hover,
 .site-nav .link:focus,

@@ -27,7 +27,7 @@
   border-radius: 50%;
   background-color: $contrast-white-color;
   cursor: pointer;
-  transition: fill $transition-duration $transition-timing-function;
+  transition: fill $tdur $ttf;
 }
 .close-button:hover,
 .close-button:active,

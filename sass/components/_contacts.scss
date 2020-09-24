@@ -2,28 +2,34 @@
     margin-left: auto;
     align-items: center;
   }
+  .contacts__item:not(:last-child) {
+    margin-right: 50px;
+  }
   
-  .contacts .link {
+  .contacts__link {
     color: $text-color;
     align-items: center;
-    transition: color $transition-duration $transition-timing-function;
+    transition: color $tdur $ttf;
   }
-  .post-icon,
-  .tel-icon {
+  .contacts__icon {
     fill: $text-color;
   
     display: inline-block;
     margin-right: 10px;
-    transition: fill $transition-duration $transition-timing-function;
+    transition: fill $tdur $ttf;
   }
+
+
+
+// Футер
 
   .post {
     display: inline-block;
     margin-bottom: 9px;
   
     font-style: normal;
-    line-height: 1.71;
-  
+    @include font(400, 14px, 0.03em, 1.71);
+      
     color: $contrast-white-color;
   }
 
@@ -34,12 +40,12 @@
   
   .footer .link {
     font-style: normal;
-    font-weight: 400;
-    line-height: 1.71;
+    @include font(400, 14px, 0.03em, 1.71);
+   
   
     color: $contrast-text-color;
   
-    transition: color $transition-duration $transition-timing-function;
+    transition: color $tdur $ttf;
   }
   
   .footer .link:not(:last-child) {

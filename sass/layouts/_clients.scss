@@ -23,12 +23,12 @@
   
     width: 170px;
     height: 90px;
-    transition: border $transition-duration $transition-timing-function;
+    transition: border $tdur $ttf;
   }
   
   .clients-icon {
     fill: $border-clients;
-    transition: fill $transition-duration $transition-timing-function;
+    transition: fill $tdur $ttf;
   }
   .clients-link:hover,
   .clients-link:focus {

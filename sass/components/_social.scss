@@ -12,11 +12,11 @@
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    transition: background-color $transition-duration $transition-timing-function;
+    transition: background-color $tdur $ttf;
   }
   .socials-icon-team {
     fill: $border-clients;
-    transition: fill $transition-duration $transition-timing-function;
+    transition: fill $tdur $ttf;
   }
   .socials-icon-company {
     fill: $contrast-white-color;
@@ -35,7 +35,7 @@
   
   .footer .socials-item .link {
     background-color: $bg-color-icon;
-    transition: background-color $transition-duration $transition-timing-function;
+    transition: background-color $tdur $ttf;
   }
   .footer-social {
     flex-direction: column;

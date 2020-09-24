@@ -62,7 +62,7 @@
 
   /* opacity: 0; */
   transform: translateY(100%);
-  transition: transform $transition-duration $transition-timing-function;
+  transition: transform $tdur $ttf;
 }
 
 .portfolio-description p {

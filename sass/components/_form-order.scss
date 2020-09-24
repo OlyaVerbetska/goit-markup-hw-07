@@ -33,7 +33,7 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
 
   border-radius: 4px;
-  transition: fill $transition-duration $transition-timing-function;
+  transition: fill $tdur $ttf;
 }
 
 .input-icon {
@@ -42,7 +42,7 @@
   bottom: 11px;
   /* transform: translateY(50%); */
   fill: $title-text-color;
-  transition: border $transition-duration $transition-timing-function;
+  transition: border $tdur $ttf;
 }
 
 .form-field:focus-within > .input-icon {
@@ -99,8 +99,8 @@
   border: 2px solid $title-text-color;
   border-radius: 4px;
   margin-right: 7px;
-  transition: background-color $transition-duration $transition-timing-function,
-    border $transition-duration $transition-timing-function;
+  transition: background-color $tdur $ttf,
+    border $tdur $ttf;
 }
 
 .form-agreement-check:checked + .form-agreement-text::before {

@@ -1,8 +1,25 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 body {
   font-family: Roboto, sans-serif;
   font-weight: 400;
   font-size: 14px;
   letter-spacing: 0.03em;
+  line-height: 1;
 }
 
 a {
@@ -41,49 +58,19 @@ h3 {
 
 .link {
   font-weight: 500;
-  line-height: 1.14;
+  font-size: 14px;
   letter-spacing: 0.02em;
-}
-
-.link.current {
-  position: relative;
-}
-
-.link.current::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  content: "";
-  background-color: #2196f3;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.is-hidden {
-  opacity: 0;
-  pointer-events: none;
+  line-height: 1.14;
 }
 
 .logo-primary {
   display: inline-block;
   padding: 24px 0 25px 0;
   margin-right: 93px;
-  /* outline: 2px solid tomato; */
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
+  letter-spacing: 0.03em;
   line-height: 1.19;
   color: #000000;
 }
@@ -98,22 +85,46 @@ h3 {
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
+  letter-spacing: 0.03em;
   line-height: 1.19;
   color: #ffffff;
 }
 
-.site-nav .list {
+.site-nav__list {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.site-nav .link {
+.site-nav__link {
   display: inline-block;
   padding: 32px 0;
   color: #212121;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site-nav__link:hover, .site-nav__link:focus {
+  color: #2196f3;
+}
+
+.site-nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.current {
+  position: relative;
+}
+
+.current::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  background-color: #2196f3;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
 }
 
 .footer-nav {
@@ -128,7 +139,11 @@ h3 {
           align-items: center;
 }
 
-.contacts .link {
+.contacts__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contacts__link {
   color: #757575;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -137,8 +152,7 @@ h3 {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.post-icon,
-.tel-icon {
+.contacts__icon {
   fill: #757575;
   display: inline-block;
   margin-right: 10px;
@@ -150,6 +164,9 @@ h3 {
   display: inline-block;
   margin-bottom: 9px;
   font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.03em;
   line-height: 1.71;
   color: #ffffff;
 }
@@ -162,6 +179,8 @@ h3 {
 .footer .link {
   font-style: normal;
   font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.03em;
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -173,6 +192,10 @@ h3 {
 }
 
 .hero-button {
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  line-height: 1.87;
   display: inline-block;
   min-width: 200px;
   padding: 10px 32px;
@@ -180,10 +203,6 @@ h3 {
   border-radius: 4px;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
   color: #ffffff;
   background-color: #2196f3;
 }
@@ -192,7 +211,6 @@ h3 {
 .hero-button:focus,
 .hero-button:active {
   cursor: pointer;
-  /* border: 0; */
   outline-color: #2196f3;
 }
 
@@ -218,8 +236,9 @@ h3 {
   outline: transparent;
   font-weight: 700;
   font-size: 16px;
-  text-align: center;
   letter-spacing: 0.06em;
+  line-height: 1;
+  text-align: center;
   color: #ffffff;
   cursor: pointer;
 }
@@ -988,11 +1007,6 @@ h3 {
 
 .portfolio {
   padding: 94px 0;
-}
-
-.site-nav .item:not(:last-child),
-.contacts .item:not(:last-child) {
-  margin-right: 50px;
 }
 
 .site-nav .link:hover,

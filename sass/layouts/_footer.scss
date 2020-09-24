@@ -1,0 +1,19 @@
+.footer {
+     background-color: $bg-color-dark;
+  }
+  .footer .container {
+    padding: 60px 15px;
+    align-items: flex-start;
+  }
+
+  .social-text {
+    margin-bottom: 20px;
+  
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  
+    color: $contrast-white-color;
+  }
+  

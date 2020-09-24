@@ -1,2 +1,70 @@
-@import './utils/variables'
-@import './utils/visually-hidden'
+@import './utils/variables';
+@import './base/common';
+@import './utils/hidden';
+
+@import './components/logo';
+@import './components/navigation';
+@import './components/contacts';
+@import './components/button';
+@import './components/social';
+@import './components/backdrop';
+@import './components/modal';
+@import './components/form-order';
+@import './components/form-subscribe';
+@import './components/filter';
+@import './components/gallery';
+
+@import './layouts/header';
+@import './layouts/hero';
+@import './layouts/features';
+@import './layouts/work';
+@import './layouts/team';
+@import './layouts/clients';
+@import './layouts/footer';
+@import './layouts/portfolio';
+
+
+
+
+
+.site-nav .item:not(:last-child),
+.contacts .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus,
+.link.current,
+.contacts .link:hover,
+.contacts .link:focus,
+.footer .link:hover,
+.footer .link:focus {
+  color: $accent-color;
+}
+
+.contacts .link:hover .post-icon,
+.contacts .link:focus .post-icon {
+  fill: $accent-color;
+}
+
+.contacts .link:hover .tel-icon,
+.contacts .link:focus .tel-icon {
+  fill: $accent-color;
+}
+.features,
+.clients {
+  padding: 94px 0;
+}
+.work-title,
+.team-title,
+.clients-title {
+  margin-bottom: 50px;
+  text-align: center;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+
+  color: $title-text-color;
+}
+

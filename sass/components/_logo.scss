@@ -1,0 +1,28 @@
+.logo-primary {
+    display: inline-block;
+    padding: 24px 0 25px 0;
+    margin-right: 93px;
+    /* outline: 2px solid tomato; */
+  
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    color: $logo;
+  }
+  .logo-accent {
+    color: $accent-color;
+  }
+  .logo-secondary {
+    display: inline-block;
+  
+    margin-bottom: 20px;
+  
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+  
+    color: $contrast-white-color;
+  }
+  

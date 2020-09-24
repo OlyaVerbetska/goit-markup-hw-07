@@ -1,0 +1,45 @@
+.subscribe-form {
+    margin: 12px 0 0 0;
+    align-items: flex-end;
+  
+    justify-content: center;
+  }
+  
+  .subscribe-label {
+    display: inline-block;
+    margin: 0 12px 0 0;
+    width: 358px;
+  }
+  .subscribe-label-title {
+    display: inline-block;
+    margin: 0 0 20px 0;
+    /* font-weight: 700; */
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $contrast-white-color;
+  }
+  
+  .subscribe-input {
+    padding: 15px 16px;
+    width: 100%;
+  
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    background-color: transparent;
+  
+    font-size: 16px;
+    color: $contrast-white-color;
+  }
+  .subscribe-input::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    color: $contrast-text-color;
+  }
+  .subscribe-input:not(:placeholder-shown) {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    outline: transparent;
+  }
+  .subscribe-form:focus-within .subscribe-input {
+    border-color: $contrast-white-color;
+    outline: $accent-color;
+  }

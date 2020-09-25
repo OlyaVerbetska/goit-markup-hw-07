@@ -539,6 +539,11 @@ img {
           align-items: flex-end;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-preferred-size: 570px;
+      flex-basis: 570px;
 }
 
 .form-subscribe__input {
@@ -690,7 +695,9 @@ img {
   height: 170px;
   margin: 0;
   font-style: normal;
+  font-weight: 400;
   font-size: 18px;
+  letter-spacing: 0.03em;
   line-height: 1.56;
   color: #ffffff;
   overflow: hidden;
@@ -707,14 +714,16 @@ img {
   margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
-  line-height: 2;
   letter-spacing: 0.06em;
+  line-height: 2;
   color: #212121;
 }
 
 .gallery__subtitle {
   margin: 0;
+  font-weight: 400;
   font-size: 16px;
+  letter-spacing: 0.03em;
   line-height: 1.87;
   color: #757575;
 }
@@ -755,8 +764,8 @@ img {
   text-align: center;
   font-weight: 900;
   font-size: 44px;
-  line-height: 1.36;
   letter-spacing: 0.06em;
+  line-height: 1.36;
   text-transform: uppercase;
   color: #ffffff;
 }
@@ -882,7 +891,9 @@ img {
 .team__text {
   margin-bottom: 16px;
   text-align: center;
+  font-weight: 400;
   font-size: 16px;
+  letter-spacing: 0.03em;
   line-height: 1.19;
   color: #757575;
 }

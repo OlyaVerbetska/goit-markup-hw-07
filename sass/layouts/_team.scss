@@ -41,8 +41,7 @@
   margin-bottom: 16px;
 
   text-align: center;
+  @include font(400, 16px, 0.03em, 1.19);
 
-  font-size: 16px;
-  line-height: 1.19;
   color: $text-color;
 }

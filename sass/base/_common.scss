@@ -2,16 +2,14 @@ body {
   font-family: Roboto, sans-serif;
   @include font();
 }
+section {
+  padding: 94px 0;
+}
 a {
   text-decoration: none;
 }
 img {
   display: block;
-  margin: 0;
-}
-h1,
-h2,
-h3 {
   margin: 0;
 }
 
@@ -33,12 +31,14 @@ h3 {
 }
 .title {
   @include font(700, 36px, 0.03em, 1.17);
-  margin-bottom: 50px;
+  margin: 0 0 50px 0;
   text-align: center;
+  
   
   color: $title-text-color;
 }
 .subtitle {
   @include font(700, 14px, 0.03em, 1.14);
   text-transform: uppercase;
+  margin: 0;
 }

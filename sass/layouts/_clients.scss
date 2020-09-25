@@ -1,40 +1,48 @@
-.clients .list {
-    flex-wrap: wrap;
-  }
-  .clients-item {
-    width: 170px;
-    height: 90px;
-    margin-right: 30px;
-    margin-bottom: 20px;
-  }
-  
-  .clients-item:nth-child(6n) {
+.clients__title {
+  @extend .title;
+}
+
+.clients__list {
+  flex-wrap: wrap;
+}
+.clients__item {
+  width: 170px;
+  height: 90px;
+  margin-right: 30px;
+  margin-bottom: 20px;
+
+  &:nth-child(6n) {
     margin-right: 0;
   }
-  .clients-item:nth-last-child(-n + 6) {
+  &:nth-last-child(-n + 6) {
     margin-bottom: 0;
   }
-  .clients-link {
-    justify-content: center;
-    align-items: center;
-  
-    border: 1px solid $border-clients;
-    border-radius: 4px;
-  
-    width: 170px;
-    height: 90px;
-    transition: border $tdur $ttf;
-  }
-  
-  .clients-icon {
-    fill: $border-clients;
-    transition: fill $tdur $ttf;
-  }
-  .clients-link:hover,
-  .clients-link:focus {
+}
+
+.clients__link {
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid $border-clients;
+  border-radius: 4px;
+
+  width: 170px;
+  height: 90px;
+  transition: border $tdur $ttf;
+
+  &:hover, &:focus {
     border: 1px solid $accent-color;
   }
-  .clients-link:hover .clients-icon,
-  .clients-link:focus .clients-icon {
+}
+
+.clients__icon {
+  fill: $border-clients;
+  transition: fill $tdur $ttf;
+
+  .clients__link:hover &,
+  .clients__link:focus & {
     fill: $accent-color;
   }
+}
+
+

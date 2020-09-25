@@ -1,4 +1,4 @@
-.logo-primary {
+.logo--primary {
   display: inline-block;
 
   padding: 24px 0 25px 0;
@@ -9,10 +9,10 @@
   
   color: $logo;
 }
-.logo-accent {
+.logo__accent {
   color: $accent-color;
 }
-.logo-secondary {
+.logo--secondary {
   display: inline-block;
   
   margin-bottom: 20px;

@@ -1,7 +1,6 @@
-.hero {
-    padding-top: 200px;
-  }
-  .overlay {
+.hero__overlay {
+    padding: 200px 0 0 0;
+  
     min-height: 600px;
     max-width: 1600px;
     margin: 0 auto;
@@ -14,12 +13,14 @@
     background-position: center;
   }
   
-  .hero .container {
+  .hero__container {
+    @extend .container;
+
     max-width: 700px;
     text-align: center;
   }
-  .hero-title {
-    margin-bottom: 30px;
+  .hero__title {
+    margin:0 0 30px 0;
     text-align: center;
   
     font-weight: 900;

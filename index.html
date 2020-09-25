@@ -17,7 +17,7 @@
       <div class="container flexbox">
         <!-- <div class="header flexbox"> -->
         <nav class="site-nav flexbox">
-          <a class="logo-primary" href="./index.html"><span class="logo-accent">Web</span>Studio</a>
+          <a class="logo--primary" href="./index.html"><span class="logo__accent">Web</span>Studio</a>
           <ul class="site-nav__list list flexbox">
             <li class="site-nav__item">
               <a class="site-nav__link link current" href="">Студия</a>
@@ -52,9 +52,9 @@
     </header>
     <main>
       <!--hero-->
-      <section class="hero overlay">
-        <div class="container">
-          <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
+      <section class="hero__overlay">
+        <div class="hero__container">
+          <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
           <button type="button" class="button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
@@ -276,46 +276,46 @@
       <!-- Клиенты -->
       <section class="clients">
         <div class="container">
-          <h2 class="clients-title">Постоянные клиенты</h2>
-          <ul class="list flexbox">
-            <li class="clients-item">
-              <a class="clients-link flexbox" href="">
-                <svg class="clients-icon" width="44px" height="49px">
+          <h2 class="clients__title">Постоянные клиенты</h2>
+          <ul class="clients__list list flexbox">
+            <li class="clients__item">
+              <a class="clients__link link flexbox" href="">
+                <svg class="clients__icon" width="44px" height="49px">
                   <use href="./images/sprite.svg#icon-client-one"></use>
                 </svg>
               </a>
             </li>
-            <li class="clients-item">
-              <a class="clients-link flexbox" href="">
-                <svg class="clients-icon" width="40px" height="52px">
+            <li class="clients__item">
+              <a class="clients__link link flexbox" href="">
+                <svg class="clients__icon" width="40px" height="52px">
                   <use href="./images/sprite.svg#icon-client-two"></use>
                 </svg>
               </a>
             </li>
-            <li class="clients-item">
-              <a class="clients-link flexbox" href="">
-                <svg class="clients-icon" width="41px" height="43px">
+            <li class="clients__item">
+              <a class="clients__link link flexbox" href="">
+                <svg class="clients__icon" width="41px" height="43px">
                   <use href="./images/sprite.svg#icon-client-three"></use>
                 </svg>
               </a>
             </li>
-            <li class="clients-item">
-              <a class="clients-link flexbox" href="">
-                <svg class="clients-icon" width="80px" height="42px">
+            <li class="clients__item">
+              <a class="clients__link link flexbox" href="">
+                <svg class="clients__icon" width="80px" height="42px">
                   <use href="./images/sprite.svg#icon-client-four"></use>
                 </svg>
               </a>
             </li>
-            <li class="clients-item">
-              <a class="clients-link flexbox" href="">
-                <svg class="clients-icon" width="59px" height="47px">
+            <li class="clients__item">
+              <a class="clients__link link flexbox" href="">
+                <svg class="clients__icon" width="59px" height="47px">
                   <use href="./images/sprite.svg#icon-client-five"></use>
                 </svg>
               </a>
             </li>
-            <li class="clients-item">
-              <a class="clients-link flexbox" href="">
-                <svg class="clients-icon" width="88px" height="45px">
+            <li class="clients__item">
+              <a class="clients__link link flexbox" href="">
+                <svg class="clients__icon" width="88px" height="45px">
                   <use href="./images/sprite.svg#icon-client-six"></use>
                 </svg>
               </a>
@@ -330,7 +330,7 @@
       <div class="container flexbox">
         <!-- Футер контакты -->
         <div class="footer__nav">
-          <a class="logo-secondary" href="./index.html"><span class="logo-accent">Web</span>Studio</a>
+          <a class="logo--secondary" href="./index.html"><span class="logo__accent">Web</span>Studio</a>
           <!--Контакты-->
           <address class="address">
             <span class="address__post"> г. Киев, пр-т Леси Украинки, 26</span>
@@ -390,59 +390,59 @@
     <!-- Модалка -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="close-button" data-modal-close>
+        <button class="modal__button" data-modal-close>
           <svg width="11px" height="11px">
-            <use href="./images/sprite.svg#icon-close-button"></use>
+            <use href="./images/sprite.svg#icon-modal__button"></use>
           </svg>
         </button>
 
         <!-- Форма -->
-        <form class="form-modal">
-          <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
+        <form class="form-order">
+          <p class="form-order__title">Оставьте свои данные, мы вам перезвоним</p>
 
-          <label class="form-field">
-            <span class="form-label">Имя</span>
+          <label class="form-order__field">
+            <span class="form-order__label">Имя</span>
 
-            <input class="form-input" type="text" name="user-name" placeholder=" " autocomplete="off" />
-            <svg class="input-icon" width="18px" height="18px">
+            <input class="form-order__input" type="text" name="user-name" placeholder=" " autocomplete="off" />
+            <svg class="form-order__icon" width="18px" height="18px">
               <use href="./images/sprite.svg#icon-form-name"></use>
             </svg>
           </label>
 
-          <label class="form-field">
-            <span class="form-label">Телефон</span>
+          <label class="form-order__field">
+            <span class="form-order__label">Телефон</span>
 
-            <input class="form-input" type="tel" name="user-tel" placeholder=" " autocomplete="off" />
-            <svg class="input-icon" width="18px" height="18px">
+            <input class="form-order__input" type="tel" name="user-tel" placeholder=" " autocomplete="off" />
+            <svg class="form-order__icon" width="18px" height="18px">
               <use href="./images/sprite.svg#icon-form-tel"></use>
             </svg>
           </label>
 
-          <label class="form-field">
-            <span class="form-label">Почта</span>
+          <label class="form-order__field">
+            <span class="form-order__label">Почта</span>
 
-            <input class="form-input" type="email" name="user-mail" placeholder=" " autocomplete="off" />
-            <svg class="input-icon" width="18px" height="18px">
+            <input class="form-order__input" type="email" name="user-mail" placeholder=" " autocomplete="off" />
+            <svg class="form-order__icon" width="18px" height="18px">
               <use href="./images/sprite.svg#icon-form-mail"></use>
             </svg>
           </label>
 
-          <label class="form-field">
-            <span class="form-label">Комментарий</span>
-            <textarea class="form-comment" name="form-comment" placeholder="Введите текст"></textarea>
+          <label class="form-order__field">
+            <span class="form-order__label">Комментарий</span>
+            <textarea class="form-order__comment" name="form-comment" placeholder="Введите текст"></textarea>
           </label>
 
-          <label class="form-agreement">
-            <input class="form-agreement-check visually-hidden" type="checkbox" name="form-agreement" />
+          <label class="form-order__agreement">
+            <input class="form-order__check  visually-hidden" type="checkbox" name="form-agreement"  />
             <!-- <svg class="icon-check" width="16px" height="15px">
               <use href="./images/sprite.svg#icon-form-check"></use>
             </svg> -->
-            <span class="form-agreement-text"
-              >Соглашаюсь с рассылкой и принимаю&nbsp;<a class="form-agreement-link" href="">Условия договора</a>
+            <span class="form-order__text"
+              >Соглашаюсь с рассылкой и принимаю&nbsp;<a class="form-order__link" href="">Условия договора</a>
             </span>
           </label>
 
-          <button class="button form-submit">Отправить</button>
+          <button class="button--center">Отправить</button>
         </form>
       </div>
     </div>

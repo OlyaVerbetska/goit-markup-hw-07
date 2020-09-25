@@ -1,5 +1,5 @@
 .form-subscribe {
-  margin: 12px 12px auto auto;
+  margin: 12px 0 auto auto;
   align-items: flex-end;
   flex-wrap: wrap;
 }
@@ -14,12 +14,13 @@
   border-radius: 4px;
   background-color: transparent;
 
-  font-size: 16px;
+  @include font(400, 16px, 0.03em, 1);
+
   color: $contrast-white-color;
 
   &::placeholder {
-    font-size: 16px;
-    line-height: 1.25;
+    @include font(400, 16px, 0.03em, 1.25);
+
     color: $contrast-text-color;
   }
   &:not(:placeholder-shown) {

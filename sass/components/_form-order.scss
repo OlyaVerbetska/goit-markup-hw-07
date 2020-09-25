@@ -1,32 +1,29 @@
-.form-title {
+.form-order__title {
   margin: 0;
   margin-bottom: 12px;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
+  @include font(700, 20px, 0.03em, 1.15);
   text-align: center;
 }
 
-.form-field {
+.form-order__field {
   display: block;
   margin: 0 0 10px 0;
 
   position: relative;
 }
 
-.form-label {
+.form-order__label {
   display: block;
   margin-bottom: 4px;
 
   top: 20px;
 
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
+  @include font(400, 12px, 0.01em, 1.17);
+
   color: $text-color;
 }
 
-.form-input {
+.form-order__input {
   width: 100%;
   padding: 11px 12px 11px 42px;
 
@@ -34,33 +31,33 @@
 
   border-radius: 4px;
   transition: fill $tdur $ttf;
+
+  &:not(:placeholder-shown) {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+  }
+  &:invalid {
+    border-color: red;
+  }
+
+  .form-order__field:focus-within & {
+    border: 1px solid $accent-color;
+    outline: transparent;
+  }
 }
 
-.input-icon {
+.form-order__icon {
   position: absolute;
   left: 12px;
   bottom: 11px;
-  /* transform: translateY(50%); */
   fill: $title-text-color;
   transition: border $tdur $ttf;
+
+  .form-order__field:focus-within & {
+    fill: $accent-color;
+  }
 }
 
-.form-field:focus-within > .input-icon {
-  fill: $accent-color;
-}
-.form-field:focus-within > .form-input {
-  border: 1px solid $accent-color;
-  outline: transparent;
-}
-
-.form-input:not(:placeholder-shown) {
-  border: 1px solid rgba(33, 33, 33, 0.2);
-}
-.form-input:invalid {
-  border-color: red;
-}
-
-.form-comment {
+.form-order__comment {
   display: inline-block;
   margin: 0 0 20px 0;
   padding: 12px 16px;
@@ -71,86 +68,86 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
-  font-size: 14px;
+  @include font(400, 14px, 0.03em, 1.17);
+
+  &:focus {
+    border: 1px solid $accent-color;
+    outline: transparent;
+  }
+
+  &::placeholder {
+    @include font(400, 14px, 0.01em, 1.14);
+
+    color: rgba(117, 117, 117, 0.5);
+  }
 }
 
-.form-comment::placeholder {
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.01em;
-
-  color: rgba(117, 117, 117, 0.5);
-}
-.form-comment:focus {
-  border: 1px solid $accent-color;
-  outline: transparent;
-}
-.form-agreement {
+.form-order__agreement {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.form-agreement-text::before {
-  display: inline-block;
-  content: "";
-  width: 16px;
-  height: 15px;
-  border: 2px solid $title-text-color;
-  border-radius: 4px;
-  margin-right: 7px;
-  transition: background-color $tdur $ttf,
-    border $tdur $ttf;
-}
-
-.form-agreement-check:checked + .form-agreement-text::before {
-  background-color: $accent-color;
-  border: none;
-  border-radius: 4px;
-  background-image: url(../images/form-check.svg);
-  background-size: contain;
-  background-origin: border-box;
-}
-
-.form-agreement-check:focus + .form-agreement-text::before,
-.form-agreement-check:hover + .form-agreement-text::before {
-  border: 2px solid $accent-color;
-  border-radius: 4px;
-}
-
-.form-agreement-check:checked:focus + .form-agreement-text::before,
-.form-agreement-check:checked:hover + .form-agreement-text::before {
-  outline: 1px solid tomato;
-  border: none;
-}
-.form-agreement-check:disabled + .form-agreement-text::before {
-  background-color: transparent;
-  border: 2px solid $text-color;
-  border-radius: 4px;
-}
-.form-agreement-check:disabled:checked + .form-agreement-text::before {
-  background-image: url(../images/form-check-disabled.svg);
-  background-color: transparent;
-  border: 2px solid $text-color;
-  border-radius: 4px;
-}
-.form-agreement-link:focus {
-  outline: 1px solid tomato;
-}
-
-.form-agreement-text {
+.form-order__text {
   display: flex;
   line-height: 1.71;
   color: $text-color;
-  /* text-align: center; */
   justify-content: center;
   align-items: center;
+
+  &::before {
+    display: inline-block;
+    content: "";
+    width: 16px;
+    height: 15px;
+    border: 2px solid $title-text-color;
+    border-radius: 4px;
+    margin-right: 7px;
+    transition: background-color $tdur $ttf, border $tdur $ttf;
+
+    .form-order__check:checked + & {
+      background-color: $accent-color;
+      border: none;
+      border-radius: 4px;
+      background-image: url(../images/form-check.svg);
+      background-size: contain;
+      background-origin: border-box;
+    }
+    .form-order__check:focus + &,
+    .form-order__check:hover + & {
+      border: 2px solid $accent-color;
+      border-radius: 4px;
+    }
+    .form-order__check:checked:focus + &,
+    .form-order__check:checked:hover + & {
+      outline: 1px solid $accent-color;
+      border: none;
+    }
+    .form-order__check:disabled + & {
+      background-color: transparent;
+      border: 2px solid $text-color;
+      border-radius: 4px;
+    }
+    .form-order__check:disabled:checked + & {
+      background-image: url(../images/form-check-disabled.svg);
+      background-color: transparent;
+      border: 2px solid $text-color;
+      border-radius: 4px;
+    }
+  }
 }
-.form-agreement-link {
+
+.form-order__link {
   color: $accent-color;
   text-decoration: underline;
+
+  &:focus {
+    outline: 1px solid $accent-color;
+  }
 }
-.form-submit {
+.button--center {
+  @extend .button;
+
   position: absolute;
   left: 50%;
   transform: translateX(-50%);

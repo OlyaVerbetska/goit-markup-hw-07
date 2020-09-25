@@ -1,11 +1,12 @@
 .features__item {
   flex-basis: calc((100% - 3 * 30px) / 4);
-  text-align: left;}
-  .features__item:not(:last-child) {
-  margin-right: 30px;
+  text-align: left;
 
-}
-.features__item::before {
+&:not(:last-child) {
+  margin-right: 30px;}
+
+
+&::before {
   content: "";
   display: block;
   height: 120px;
@@ -15,34 +16,36 @@
   background-color: $bg-color-light;
   background-repeat: no-repeat;
   background-position: center;
+
 }
-.features__item:nth-child(1)::before {
+&:nth-child(1)::before {
   background-image: url(../images/feature-antenna.svg);
 }
 
-.features__item:nth-child(2)::before {
+&:nth-child(2)::before {
   background-image: url(../images/feature-clock.svg);
 }
 
-.features__item:nth-child(3)::before {
+&:nth-child(3)::before {
   background-image: url(../images/feature-diagram.svg);
 }
 
-.features__item:nth-child(4)::before {
+&:nth-child(4)::before {
   background-image: url(../images/feature-astronaut.svg);
 }
+}
+
 .features__text {
   margin: 0;
 @include font(400, 14px, 0.03, 1.71);
   color: $text-color;
 }
 
-.features-subtitle {
+.features__subtitle {
+  @extend .subtitle;
   margin-bottom: 10px;
-
-  font-weight: 700;
-  line-height: 1.15;
-  text-transform: uppercase;
 
   color: $title-text-color;
 }
+
+

@@ -26,33 +26,3 @@
     fill: $accent-color;
   }
 }
-
-// Футер
-
-.post {
-  display: inline-block;
-  margin-bottom: 9px;
-
-  font-style: normal;
-  @include font(400, 14px, 0.03em, 1.71);
-
-  color: $contrast-white-color;
-}
-
-.link.mail {
-  display: inline-block;
-  margin-bottom: 9px;
-}
-
-.footer .link {
-  font-style: normal;
-  @include font(400, 14px, 0.03em, 1.71);
-
-  color: $contrast-text-color;
-
-  transition: color $tdur $ttf;
-}
-
-.footer .link:not(:last-child) {
-  margin-bottom: 9px;
-}

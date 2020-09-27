@@ -37,7 +37,7 @@
 
 .features__text {
   margin: 0;
-@include font(400, 14px, 0.03, 1.71);
+@include font(400, 14px, 0.03em, 1.71);
   color: $text-color;
 }
 

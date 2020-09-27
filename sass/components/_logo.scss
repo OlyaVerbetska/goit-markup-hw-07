@@ -4,7 +4,7 @@
   padding: 24px 0 25px 0;
   margin-right: 93px;
     
-  font-family: Raleway, sans-serif;
+  font-family: $font-logo;
   @include font (700, 26px, 0.03em, 1.19);
   
   color: $logo;
@@ -17,7 +17,7 @@
   
   margin-bottom: 20px;
 
-  font-family: Raleway, sans-serif;
+  font-family: $font-logo;
   @include font (700, 26px, 0.03em, 1.19);
 
   color: $contrast-white-color;
